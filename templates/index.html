@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit to MongoDB</title>
+</head>
+<body>
+    <h2>Submit Your Data</h2>
+
+    <!-- Display the error on the same page if it exists -->
+    {% if error %}
+        <div style="color: red; border: 1px solid red; padding: 10px; margin-bottom: 15px; width: 300px;">
+            <strong>Error:</strong> {{ error }}
+        </div>
+    {% endif %}
+
+    <form action="/" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <button type="submit">Submit Data</button>
+    </form>
+
+    <hr>
+    <p>Want to see the API? <a href="/api">Click here to view /api</a></p>
+</body>
+</html>
